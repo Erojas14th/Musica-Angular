@@ -1,3 +1,5 @@
+import { Cancion } from "./cancion";
+
 export class Album{
 
     public id:number;
@@ -5,5 +7,7 @@ export class Album{
     public urlFoto:string;
     public comentario:string;
     public anho:string;
+    public canciones:Cancion[];
+    
     
 }

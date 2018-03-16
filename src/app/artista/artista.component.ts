@@ -1,4 +1,6 @@
+
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-artista',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./artista.component.css']
 })
 export class ArtistaComponent implements OnInit {
-
-  constructor() { }
+ 
 
   ngOnInit() {
+  
   }
+
+ 
 
 }

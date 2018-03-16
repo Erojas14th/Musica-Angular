@@ -1,4 +1,4 @@
-export class Artista{
+export class Cancion{
 
     public id:number;
     public nombre:string;

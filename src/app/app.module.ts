@@ -16,6 +16,19 @@ import { ComboboxDirective } from './_directive/combobox.directive';
 
 // Routing
 import { AppRoutingModule } from './app-routing.module';
+
+// Servicios
+import { ArtistaService } from './_service/artista.service';
+// Http
+import { HttpClientModule } from '@angular/common/http';
+import { ArtistaDetalleComponent } from './artista/artista-detalle/artista-detalle.component';
+import { ArtistaInicioComponent } from './artista/artista-inicio/artista-inicio.component';
+//Modulos
+import { FormsModule } from '@angular/forms';
+import { DataTableModule } from "angular2-datatable";
+import { AlbumListaComponent } from './album/album-lista/album-lista.component';
+import { AlbumDetalleComponent } from './album/album-detalle/album-detalle.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,14 +38,22 @@ import { AppRoutingModule } from './app-routing.module';
     CancionComponent,
     FooterComponent,
     HeaderComponent,
-    ComboboxDirective
+    ComboboxDirective,
+    ArtistaDetalleComponent,
+    ArtistaInicioComponent,
+    AlbumListaComponent,
+    AlbumDetalleComponent
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    DataTableModule
     
   ],
-  providers: [],
+  providers: [ArtistaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

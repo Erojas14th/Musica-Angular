@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="offset-lg-4 col-lg-4 col-sm-5 col-12">
+        <li *ngFor="let e of artistas">
+        <div class="card">
+         
+          <img [src]="e.urlFoto" alt="Card image cap" width="100%" height="200px">
+          <label class="text-light date text-center">{{e.id}}</label>
+          <div class="card-block">
+            <h4 class="text-light">{{e.nombre}}</h4>
+            <p>{{e.descripcion}}</p>
+            <button type="button" [routerLink]="[e.id]" routerLinkActive="active" class="btn btn-warning text-light">Leer mas</button>
+          </div>
+        </div>
+        </li>
+    </div>
+
+  </div>
+</div>

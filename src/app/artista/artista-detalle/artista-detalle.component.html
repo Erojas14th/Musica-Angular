@@ -1,0 +1,16 @@
+<h1>Artista : {{artista?.nombre}}</h1>
+<hr>
+<h2>Albums :</h2>
+<table>
+    <th>Nombre</th>
+    <th>Comentario</th>
+    <th>Año</th>
+    <th>Foto</th>
+
+    <tr *ngFor="let a of artista?.albums">
+      <td>{{a.nombre}}</td>
+      <td>{{a.comentario}}</td>
+      <td>{{a.anho}}</td>
+      <td><img [src]="a.urlFoto"></td>
+    </tr>
+</table>
