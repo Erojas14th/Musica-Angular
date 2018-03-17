@@ -10,6 +10,8 @@ import { AlbumComponent } from './album/album.component';
 import { CancionComponent } from './cancion/cancion.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { AlbumListaComponent } from './album/album-lista/album-lista.component';
+import { AlbumDetalleComponent } from './album/album-detalle/album-detalle.component';
 
 // Directiva
 import { ComboboxDirective } from './_directive/combobox.directive';
@@ -26,8 +28,8 @@ import { ArtistaInicioComponent } from './artista/artista-inicio/artista-inicio.
 //Modulos
 import { FormsModule } from '@angular/forms';
 import { DataTableModule } from "angular2-datatable";
-import { AlbumListaComponent } from './album/album-lista/album-lista.component';
-import { AlbumDetalleComponent } from './album/album-detalle/album-detalle.component';
+// Pipe
+import { AlbumFilterPipe } from './_pipe/album-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,8 @@ import { AlbumDetalleComponent } from './album/album-detalle/album-detalle.compo
     ArtistaDetalleComponent,
     ArtistaInicioComponent,
     AlbumListaComponent,
-    AlbumDetalleComponent
+    AlbumDetalleComponent,
+    AlbumFilterPipe
 
   ],
   imports: [

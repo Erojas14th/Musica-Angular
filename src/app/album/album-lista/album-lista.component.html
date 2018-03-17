@@ -3,7 +3,7 @@
     
     <!-- Inicio  Data Table -->
     <!-- Uso del pipe de filtrado -->
-    <table class="table table-striped" [mfData]="artista?.albums" #mf="mfDataTable" [mfRowsOnPage]="5">
+    <table class="table table-striped" [mfData]="artista?.albums | albumFilter : filterQuery" #mf="mfDataTable" [mfRowsOnPage]="5">
       <thead>
         <tr>
           <th colspan="3">
