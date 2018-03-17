@@ -12,11 +12,13 @@ import { Routes, RouterModule } from '@angular/router';
 const appRoutes: Routes = [
     { path: 'artista', component: ArtistaComponent , children:[
       {  path:'', component: ArtistaInicioComponent},
-      {  path:':id', component: AlbumComponent}
+     
     ]},
     { path: 'album', component: AlbumComponent, children:[
-        {path:'', component:AlbumListaComponent},
-        {  path:':id', component: AlbumDetalleComponent}
+        {path:'', component:AlbumComponent},
+        {  path:':id', component: AlbumListaComponent },
+        { path:':id/detalle/:idDetalle', component: AlbumDetalleComponent},
+        {  path:'prueba', component: AlbumDetalleComponent}
     ]},   
     { path: '', redirectTo: 'artista', pathMatch: 'full'}
 ]

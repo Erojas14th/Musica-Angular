@@ -22,7 +22,11 @@ export class ArtistaInicioComponent implements OnInit {
   listar() {
     this.artistaService.getAllArtistas().subscribe(data => {
       this.artistas = data;
-    });
+    });{}
   }
 
+  navegar(id:number){
+    this.router.navigate(['/album',id]);
+    console.log(`Componente Artista :Id   ${id}`);
+  }
 }

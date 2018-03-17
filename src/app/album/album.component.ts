@@ -1,3 +1,5 @@
+import { ArtistaService } from './../_service/artista.service';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlbumComponent implements OnInit {
 
-  constructor() { }
+  idArtista: number;
+
+  constructor(){}
 
   ngOnInit() {
+  
+   
   }
+
 
 }

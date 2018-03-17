@@ -9,7 +9,7 @@
           <div class="card-block">
             <h4 class="text-light">{{e.nombre}}</h4>
             <p>{{e.descripcion}}</p>
-            <button type="button" [routerLink]="[e.id]" routerLinkActive="active" class="btn btn-warning text-light">Leer mas</button>
+            <button type="button" (click)="navegar(e.id)" routerLinkActive="active"  class="btn btn-warning text-light">Leer mas</button>
           </div>
         </div>
         </li>

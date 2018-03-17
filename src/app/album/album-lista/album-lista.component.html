@@ -1,43 +1,60 @@
 <div class="row">
-  <div class="col-xs-12">
-    
-    <!-- Inicio  Data Table -->
-    <!-- Uso del pipe de filtrado -->
-    <table class="table table-striped" [mfData]="artista?.albums | albumFilter : filterQuery" #mf="mfDataTable" [mfRowsOnPage]="5">
-      <thead>
-        <tr>
-          <th colspan="3">
-            <input class="form-control" [(ngModel)]="filterQuery" placeholder="Buscar en esta lista" />
-          </th>
-        </tr>
-        <tr>
-          <th>
-            #
-          </th>
-          <th>
-            <mfDefaultSorter by="Nombre">Nombre</mfDefaultSorter>
-          </th>  
-          <th class="text-center">
-            <mfDefaultSorter by="Año">Año</mfDefaultSorter>
-          </th>       
-        </tr>
-      </thead>
-      <tbody>
+  <div class="col-md-5">
+    <div class="row">
+      <div class="col-xs-12">
 
-        <tr *ngFor="let p of mf.data; let i = index" [attr.data-index]="i" style="cursor: pointer" >
-          <td>{{i + 1}}</td>
-          <td>{{p.nombre}}</td>  
-          <td class="text-center">{{p.anho}}</td>       
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="4">
-            <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
-          </td>
-        </tr>
-      </tfoot>
-    </table>
-       <!-- Fin  Data Table -->
+        <!-- Inicio  Data Table -->
+        <!-- Uso del pipe de filtrado -->
+        <table class="table table-striped" [mfData]="artista?.albums | albumFilter : filterQuery" #mf="mfDataTable" [mfRowsOnPage]="5">
+          <thead>
+            <tr>
+              <th colspan="3">
+                <input class="form-control" [(ngModel)]="filterQuery" placeholder="Buscar en esta lista" />
+              </th>
+            </tr>
+            <tr>
+              <th>
+                #
+              </th>
+              <th>
+                <mfDefaultSorter by="Nombre">Nombre</mfDefaultSorter>
+              </th>
+              <th class="text-center">
+                <mfDefaultSorter by="Año">Año</mfDefaultSorter>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr *ngFor="let p of mf.data; let i = index" [attr.data-index]="i" style="cursor: pointer" [routerLink]="['detalle',p.id]"
+              routerLinkActive="active">
+              <td>{{i + 1}}</td>
+              <td>{{p.nombre}}</td>
+              <td class="text-center">{{p.anho}}</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4">
+                <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+        <!-- Fin  Data Table -->
+      </div>
+    </div>
+
+  </div>
+  <div class="col-md-7">
+
+
+    <div class="hovereffect">
+      <img class="img-responsive" [src]="artista?.urlFoto" >
+      <div class="overlay">
+
+        <p>{{artista?.nombre}}</p>
+      </div>
+    </div>
   </div>
 </div>

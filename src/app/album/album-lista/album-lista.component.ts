@@ -28,12 +28,13 @@ export class AlbumListaComponent implements OnInit {
       this.idArtista = params['id'];
       this.artistaService.getArtistaById(this.idArtista).subscribe(data => {
       this.artista=data;
-      console.log(this.artista);
+      
+    
       });
 
     });
    
   }
-  //METODOS
+ 
 
 }
