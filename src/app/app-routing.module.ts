@@ -17,7 +17,7 @@ const appRoutes: Routes = [
     { path: 'album', component: AlbumComponent, children:[
         {path:'', component:AlbumComponent},
         {  path:':id', component: AlbumListaComponent },
-        { path:':id/detalle/:idDetalle', component: AlbumDetalleComponent},
+        { path:':idArtista/detalle/:idAlbum', component: AlbumDetalleComponent},
         {  path:'prueba', component: AlbumDetalleComponent}
     ]},   
     { path: '', redirectTo: 'artista', pathMatch: 'full'}

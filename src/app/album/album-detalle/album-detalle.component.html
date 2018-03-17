@@ -1,3 +1,47 @@
-<p>
-  album-detalle works!
-</p>
+<div class="row">
+  <div class="col-md-6">
+    <div *ngIf="album">
+    
+        <div class="col-xs-12">
+          <img [src]="album.urlFoto" alt="{{album.nombre}}" class="img-responsive" style="max-height: 300px;">
+        </div>
+  
+
+
+
+      <div class="form-group">
+          <label for="exampleFormControlInput1">Nombre :</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" value="{{album.nombre}}" disabled="disabled">
+        </div>
+
+
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Comentario :</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" disabled="disabled">{{album.comentario}}</textarea>
+      </div>
+
+
+      <div class="form-group">
+          <label for="exampleFormControlInput1">Año :</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" value="{{album.anho}}" disabled="disabled">
+        </div>
+
+
+
+    
+
+    </div>
+  </div>
+  <div class="col-md-6">
+  
+      <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="controls" width="580" height="780" [src]="temp" frameborder="0" allowfullscreen></iframe>
+        </div>
+  </div>
+  <div class="row">
+      <div class="col-xs-12">
+        <button class="btn btn-success" (click)="editarPlato()">Editar</button>
+
+      </div>
+    </div>
+</div>

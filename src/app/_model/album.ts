@@ -8,6 +8,6 @@ export class Album{
     public comentario:string;
     public anho:string;
     public canciones:Cancion[];
-    
+    public urlVideo:string;
     
 }

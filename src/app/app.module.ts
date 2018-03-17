@@ -1,4 +1,6 @@
 
+import { AlbumService } from './_service/album.service';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -26,7 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ArtistaDetalleComponent } from './artista/artista-detalle/artista-detalle.component';
 import { ArtistaInicioComponent } from './artista/artista-inicio/artista-inicio.component';
 //Modulos
-import { FormsModule } from '@angular/forms';
+import { FormsModule , ReactiveFormsModule  } from '@angular/forms';
 import { DataTableModule } from "angular2-datatable";
 // Pipe
 import { AlbumFilterPipe } from './_pipe/album-filter.pipe';
@@ -53,10 +55,11 @@ import { AlbumFilterPipe } from './_pipe/album-filter.pipe';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    DataTableModule
+    DataTableModule,
+    ReactiveFormsModule
     
   ],
-  providers: [ArtistaService],
+  providers: [ArtistaService, AlbumService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
